@@ -2,21 +2,21 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/index.html');
-});
+// app.get('/', function (req, res) {
+//     res.sendFile(__dirname + '/index.html');
+// });
 
 io.on("connection", (socket) => {
     console.log("a user connected");
-    socket.emit("message", "you are connected")
-    socket.on('message', function (message) {
-        console.log('A client is speaking to me! They’re saying: ' + message);
-    }); 
-    socket.on("chat message", (msg) => {
-        io.emit("chat message", msg)
-        console.log(("message: " + msg));
+    // socket.emit("message", "you are connected")
+    // socket.on('message', function (message) {
+    //     console.log('A client is speaking to me! They’re saying: ' + message);
+    // }); 
+    // socket.on("chat message", (msg) => {
+    //     io.emit("chat message", msg)
+    //     console.log(("message: " + msg));
 
-    })
+    // })
 
 })
 

@@ -23,9 +23,9 @@
             });
 
             function setNotification() {
-                showDesktopNotification('Ben', 'Desktop Notification..!', '/Ben.jpg');
-                sendNodeNotification('Ben', 'Browser Notification..!', '/Ben.jpg');
-            }
+                showDesktopNotification('Ben', 'Desktop Notification..!', '/index.jpg');
+                sendNodeNotification('Ben', 'Browser Notification..!', '/index.jpg');
+            } 
 
             var Notification = window.Notification || window.mozNotification || window.webkitNotification;
             Notification.requestPermission(function (permission) {
